@@ -68,43 +68,23 @@ public class Main {
         // в условии сказанно расписать каждый месяц
         int monthNumber = 12;
         switch (monthNumber){
-            case 1:
-                System.out.println("Месяц Январь.Сезон зима");
-                break;
-            case 2:
-                System.out.println("Месяц Февраль.Сезон зима");
-                break;
-            case 3:
-                System.out.println("Месяц Март.Сезон весна");
+            case 1,2,12:
+                System.out.println("Сезон зима");
                 break;
 
-            case 4:
-                System.out.println("Месяц Апрель.Сезон весна");
+            case 3,4,5:
+                System.out.println("Сезон весна");
                 break;
-            case 5:
-                System.out.println("Месяц Май.Сезон весна");
+
+
+            case 6,7,8:
+                System.out.println("Сезон лето");
                 break;
-            case 6:
-                System.out.println("Месяц Июнь.Сезон лето");
+
+            case 9,10,11:
+                System.out.println("Сезон осень");
                 break;
-            case 7:
-                System.out.println("Месяц Июль.Сезон лето");
-                break;
-            case 8:
-                System.out.println("Месяц Август.Сезон лето");
-                break;
-            case 9:
-                System.out.println("Месяц Сентябрь.Сезон осень");
-                break;
-            case 10:
-                System.out.println("Месяц Октябрь.Сезон осень");
-                break;
-            case 11:
-                System.out.println("Месяц Ноябрь.Сезон осень");
-                break;
-            case 12:
-                System.out.println("Месяц Декабрь.Сезон зима");
-                break;
+
             default:
                 System.out.println("Такого месяца не существует");
 
