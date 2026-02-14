@@ -24,52 +24,48 @@ public class Main {
 
         } else if (clienOS1 == 1 && clientDeviceYear >= 2015) {
             System.out.println("Установите версию приложения для Android по ссылке");
-
-        } else if (clienOS1 == 1 && clientDeviceYear < 2015) {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
-        if (clienOS1 == 0 && clientDeviceYear < 2015) {
+        else if (clienOS1 == 0 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else if (clienOS1 == 0 && clientDeviceYear >= 2015) {
-            System.out.println("Установите версию приложения для Android по ссылке");
-        }
+        } else if(clienOS1== 0 && clientDeviceYear>=2015) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else System.out.println("У вас другой  телефон");
         System.out.println("         ");
         // Задача 3
         // переменная year обозначена в задаче как 2021г
         //Из условия я понял что отсчет високосного года начинаем с 1584г
         // проверяю остаток от деления на 4 и учитываю условие 400 и 100 лет
         int year = 2021;
-        if (year < 1584) {
-            System.out.println("год не является високосным");
-        } else if(year % 4 ==0 && (year-400) % 4 ==0){
+         if ( year < 1584 && year >0) {
+             System.out.println("Отсчет високосного года не был введен");
+         }else if(year % 4 ==0 && (year-400) % 4 ==0 && year >0){
             System.out.println("год  является високосным");
-        } else if (year % 100 != 0){
+        } else if (year % 100 != 0 && year>0 ){
             System.out.println("год не является високосным");
-        }
+        }else  System.out.println(" Такого года нет");
         System.out.println("         ");
         // Задача 4
         //Обьявляю целочисленную переменную deliveryDistance
         // И переменную время доставки deliveryTime.... String т.к. в условии об этом не сказанно
         int  deliveryDistance = 95;
-        String  deliveryTimeShort ;
-        String  deliveryTimeMedium;
-        String  deliveryTimeLong;
-        String  noDelivery;
+        int  deliveryTimeShort =1 ;
+
         if (deliveryDistance<=20){
-            deliveryTimeShort="Один ";
             System.out.println("Потребуется дней: "+deliveryTimeShort);
         } else if (deliveryDistance>=20 && deliveryDistance<=60) {
-            deliveryTimeMedium="Двое суток";
-            System.out.println("Потребуется дней: "+deliveryTimeMedium);
+            deliveryTimeShort=deliveryTimeShort+1;
+            System.out.println("Потребуется дней: "+deliveryTimeShort);
         } else if (deliveryDistance>=60 && deliveryDistance<=100) {
-            deliveryTimeLong="Трое суток";
-            System.out.println("Потребуется дней: "+deliveryTimeLong);
+            deliveryTimeShort=deliveryTimeShort+2;
+            System.out.println("Потребуется дней: "+deliveryTimeShort);
         } else if (deliveryDistance>100) {
-            noDelivery="Доставки нет";
-            System.out.println("Потребуется дней: "+noDelivery);
-        }
-        System.out.println("            ");
+            System.out.println("Потребуется дней: "+" доставки нет");
+        }else
+        System.out.println("  не верно ввели данные   ");
+        System.out.println("    ");
+
         // Задача 5
+        // в условии сказанно расписать каждый месяц
         int monthNumber = 12;
         switch (monthNumber){
             case 1:
