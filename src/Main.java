@@ -39,16 +39,14 @@ public class Main {
         int year = 2021;
          if ( year < 1584) {
              System.out.println("Отсчет високосного года не был введен");
-         }else if(year % 4 ==0 && (year-400) % 4 ==0){
-            System.out.println("год  является високосным");
-        } else if (year % 100 != 0 ){
-            System.out.println("год не является високосным");
-        }else { System.out.println(" Такого года нет");}
+         }else if(year % 4 ==0 || year % 400==0 && year % 100!=0 ) {
+             System.out.println("год является високосным");
+        }else { System.out.println(" год не является високосным");}
         System.out.println("         ");
         // Задача 4
         //Обьявляю целочисленную переменную deliveryDistance
         // И переменную время доставки deliveryTime.... String т.к. в условии об этом не сказанно
-        int  deliveryDistance = 95;
+        int  deliveryDistance = 102;
         int  deliveryTimeShort =1 ;
 
         if (deliveryDistance<=20){
