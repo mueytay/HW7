@@ -28,21 +28,22 @@ public class Main {
         else if (clienOS1 == 0 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
         } else if(clienOS1== 0 && clientDeviceYear>=2015) {
-            System.out.println("Установите версию приложения для iOS по ссылке");
-        } else System.out.println("У вас другой  телефон");
+            System.out.println("Установите версию приложения для iOS по ссылке");}
+
+        else {System.out.println("У вас другой  телефон");}
         System.out.println("         ");
         // Задача 3
         // переменная year обозначена в задаче как 2021г
         //Из условия я понял что отсчет високосного года начинаем с 1584г
         // проверяю остаток от деления на 4 и учитываю условие 400 и 100 лет
         int year = 2021;
-         if ( year < 1584 && year >0) {
+         if ( year < 1584) {
              System.out.println("Отсчет високосного года не был введен");
-         }else if(year % 4 ==0 && (year-400) % 4 ==0 && year >0){
+         }else if(year % 4 ==0 && (year-400) % 4 ==0){
             System.out.println("год  является високосным");
-        } else if (year % 100 != 0 && year>0 ){
+        } else if (year % 100 != 0 ){
             System.out.println("год не является високосным");
-        }else  System.out.println(" Такого года нет");
+        }else { System.out.println(" Такого года нет");}
         System.out.println("         ");
         // Задача 4
         //Обьявляю целочисленную переменную deliveryDistance
@@ -58,10 +59,9 @@ public class Main {
         } else if (deliveryDistance>=60 && deliveryDistance<=100) {
             deliveryTimeShort=deliveryTimeShort+2;
             System.out.println("Потребуется дней: "+deliveryTimeShort);
-        } else if (deliveryDistance>100) {
-            System.out.println("Потребуется дней: "+" доставки нет");
+
         }else
-        System.out.println("  не верно ввели данные   ");
+        {System.out.println("  нет доставки   ");}
         System.out.println("    ");
 
         // Задача 5
